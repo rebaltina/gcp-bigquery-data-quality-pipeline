@@ -26,6 +26,6 @@ jobs:
 
       - name: Run dbt build
         run: |
-          cd ecommerce-dbt
+          cd ecommerce_dbt
           dbt deps
           dbt build --profiles-dir .
