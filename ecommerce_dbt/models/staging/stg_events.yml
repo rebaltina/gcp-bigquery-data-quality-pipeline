@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: "Eventi GA4 puliti"
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "event_date >= '2021-01-01'"
+          severity: error
+          
+    columns:
+
+      - name: event_date
+        tests:
+          - not_null:
+              severity: error
+
+      - name: event_name
+        tests:
+          - not_null:
+              severity: error
+
+      - name: user_pseudo_id
+        tests:
+          - not_null:
+              severity: error

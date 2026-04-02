@@ -1,0 +1,202 @@
+[0m18:00:52.157337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043b52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071f39d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071f3890>]}
+
+
+============================== 18:00:52.166164 | 24c8cd82-ed53-4030-9957-b53fd1cecc95 ==============================
+[0m18:00:52.166164 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:00:52.167096 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/debattistiv/.dbt', 'partial_parse': 'True', 'log_format': 'default', 'printer_width': '80', 'no_print': 'None', 'debug': 'False', 'static_parser': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'invocation_command': 'dbt debug', 'warn_error': 'None', 'quiet': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'fail_fast': 'False', 'empty': 'None'}
+[0m18:00:52.189741 [info ] [MainThread]: dbt version: 1.11.7
+[0m18:00:52.205782 [info ] [MainThread]: python version: 3.13.7
+[0m18:00:52.206202 [info ] [MainThread]: python path: /Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt-env/bin/python3.13
+[0m18:00:52.206480 [info ] [MainThread]: os info: macOS-15.7.4-arm64-arm-64bit-Mach-O
+[0m18:01:02.418573 [info ] [MainThread]: Using profiles dir at /Users/debattistiv/.dbt
+[0m18:01:02.418906 [info ] [MainThread]: Using profiles.yml file at /Users/debattistiv/.dbt/profiles.yml
+[0m18:01:02.419056 [info ] [MainThread]: Using dbt_project.yml file at /Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt_project.yml
+[0m18:01:02.419198 [info ] [MainThread]: adapter type: bigquery
+[0m18:01:02.419325 [info ] [MainThread]: adapter version: 1.11.1
+[0m18:01:02.419462 [info ] [MainThread]: Configuration:
+[0m18:01:02.419580 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:01:02.419702 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:01:02.419821 [info ] [MainThread]: Required dependencies:
+[0m18:01:02.420113 [debug] [MainThread]: Executing "git --help"
+[0m18:01:02.455912 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:01:02.456459 [debug] [MainThread]: STDERR: "b''"
+[0m18:01:02.456657 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:01:02.456839 [info ] [MainThread]: Connection:
+[0m18:01:02.457037 [info ] [MainThread]:   method: service-account
+[0m18:01:02.457174 [info ] [MainThread]:   database: data-managment-491315
+[0m18:01:02.457298 [info ] [MainThread]:   execution_project: data-managment-491315
+[0m18:01:02.457419 [info ] [MainThread]:   schema: ecommerce_staging
+[0m18:01:02.457541 [info ] [MainThread]:   location: europe-west6
+[0m18:01:02.457661 [info ] [MainThread]:   priority: interactive
+[0m18:01:02.457781 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m18:01:02.457898 [info ] [MainThread]:   impersonate_service_account: None
+[0m18:01:02.458020 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m18:01:02.458137 [info ] [MainThread]:   job_retries: 1
+[0m18:01:02.458254 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m18:01:02.458374 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m18:01:02.458489 [info ] [MainThread]:   timeout_seconds: 300
+[0m18:01:02.458606 [info ] [MainThread]:   client_id: None
+[0m18:01:02.458720 [info ] [MainThread]:   token_uri: None
+[0m18:01:02.458834 [info ] [MainThread]:   compute_region: None
+[0m18:01:02.458950 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m18:01:02.459064 [info ] [MainThread]:   gcs_bucket: None
+[0m18:01:02.459177 [info ] [MainThread]:   dataproc_batch: None
+[0m18:01:02.459545 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m18:01:02.569001 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m18:01:02.569382 [debug] [MainThread]: On debug: select 1 as id
+[0m18:01:02.569596 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:01:02.569805 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: '/~/Documents/mystuff/tech/dbt-bigquery.json''
+[0m18:01:02.569986 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m18:01:02.570125 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: '/~/Documents/mystuff/tech/dbt-bigquery.json'
+[0m18:01:02.570275 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m18:01:02.570472 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m18:01:02.570605 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt_project.yml> not found
+
+[0m18:01:02.570737 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m18:01:02.578129 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 10.845109, "process_in_blocks": "0", "process_kernel_time": 0.640741, "process_mem_max_rss": "205799424", "process_out_blocks": "0", "process_user_time": 1.836145}
+[0m18:01:02.578742 [debug] [MainThread]: Command `dbt debug` failed at 18:01:02.578671 after 10.85 seconds
+[0m18:01:02.579022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1316a9ba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1316cf530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1315c0c00>]}
+[0m18:01:02.579275 [debug] [MainThread]: Flushing usage events
+[0m18:01:03.289899 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:15:06.536179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105eacec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e43750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e439d0>]}
+
+
+============================== 14:15:06.543595 | b83212eb-4ab2-49fa-a519-a861f255d660 ==============================
+[0m14:15:06.543595 [info ] [MainThread]: Running with dbt=1.11.7
+[0m14:15:06.544310 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'write_json': 'True', 'fail_fast': 'False', 'quiet': 'False', 'static_parser': 'True', 'printer_width': '80', 'use_colors': 'True', 'partial_parse': 'True', 'log_format': 'default', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'no_print': 'None', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt init gcp-bigquery-data-quality-pipeline', 'version_check': 'True', 'debug': 'False', 'introspect': 'True', 'profiles_dir': '/Users/debattistiv/.dbt', 'indirect_selection': 'eager', 'log_path': 'logs', 'cache_selected_only': 'False', 'use_experimental_parser': 'False'}
+[0m14:15:26.659418 [debug] [MainThread]: Starter project path: /Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt-env/lib/python3.13/site-packages/dbt/include/starter_project
+[0m14:15:26.674503 [info ] [MainThread]: 
+Your new dbt project "ecommerce_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:15:26.674789 [info ] [MainThread]: Setting up your profile.
+[0m14:18:48.625315 [info ] [MainThread]: Profile ecommerce_dbt written to /Users/debattistiv/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:18:48.695329 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 222.537, "process_in_blocks": "0", "process_kernel_time": 0.555719, "process_mem_max_rss": "207470592", "process_out_blocks": "0", "process_user_time": 1.489257}
+[0m14:18:48.697535 [debug] [MainThread]: Command `dbt init` succeeded at 14:18:48.697355 after 222.54 seconds
+[0m14:18:48.698382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120af5940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d169f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120c086b0>]}
+[0m14:18:48.699055 [debug] [MainThread]: Flushing usage events
+[0m14:18:49.349877 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:19:30.441619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c90ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1159db750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1159db9d0>]}
+
+
+============================== 14:19:30.445867 | 170a4248-ee8e-428f-bac6-0fe0f5672cf2 ==============================
+[0m14:19:30.445867 [info ] [MainThread]: Running with dbt=1.11.7
+[0m14:19:30.446261 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/debattistiv/.dbt', 'write_json': 'True', 'log_path': 'logs', 'log_cache_events': 'False', 'no_print': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'debug': 'False', 'cache_selected_only': 'False', 'empty': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'printer_width': '80', 'use_colors': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'introspect': 'True', 'version_check': 'True'}
+[0m14:19:30.460001 [info ] [MainThread]: dbt version: 1.11.7
+[0m14:19:30.460342 [info ] [MainThread]: python version: 3.13.7
+[0m14:19:30.460562 [info ] [MainThread]: python path: /Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt-env/bin/python3.13
+[0m14:19:30.460721 [info ] [MainThread]: os info: macOS-15.7.4-arm64-arm-64bit-Mach-O
+[0m14:19:31.733671 [info ] [MainThread]: Using profiles dir at /Users/debattistiv/.dbt
+[0m14:19:31.733930 [info ] [MainThread]: Using profiles.yml file at /Users/debattistiv/.dbt/profiles.yml
+[0m14:19:31.734086 [info ] [MainThread]: Using dbt_project.yml file at /Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt_project.yml
+[0m14:19:31.734279 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:19:31.737341 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.3526834, "process_in_blocks": "0", "process_kernel_time": 0.382195, "process_mem_max_rss": "213450752", "process_out_blocks": "0", "process_user_time": 1.363227}
+[0m14:19:31.737686 [debug] [MainThread]: Command `dbt debug` failed at 14:19:31.737637 after 1.35 seconds
+[0m14:19:31.737872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x138927360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1389144d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1389f4af0>]}
+[0m14:19:31.738064 [debug] [MainThread]: Flushing usage events
+[0m14:19:32.317790 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:23:56.904876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b48ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087b7750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087b79d0>]}
+
+
+============================== 14:23:56.909038 | ca8d3f64-d843-4256-9586-dc7809401a7b ==============================
+[0m14:23:56.909038 [info ] [MainThread]: Running with dbt=1.11.7
+[0m14:23:56.909391 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'printer_width': '80', 'cache_selected_only': 'False', 'profiles_dir': '/Users/debattistiv/.dbt', 'log_cache_events': 'False', 'version_check': 'True', 'partial_parse': 'True', 'no_print': 'None', 'target_path': 'None', 'empty': 'None', 'static_parser': 'True', 'quiet': 'False', 'warn_error': 'None', 'write_json': 'True', 'log_format': 'default', 'introspect': 'True', 'use_colors': 'True', 'fail_fast': 'False'}
+[0m14:23:56.922673 [info ] [MainThread]: dbt version: 1.11.7
+[0m14:23:56.922923 [info ] [MainThread]: python version: 3.13.7
+[0m14:23:56.923076 [info ] [MainThread]: python path: /Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt-env/bin/python3.13
+[0m14:23:56.923227 [info ] [MainThread]: os info: macOS-15.7.4-arm64-arm-64bit-Mach-O
+[0m14:23:58.185252 [info ] [MainThread]: Using profiles dir at /Users/debattistiv/.dbt
+[0m14:23:58.185539 [info ] [MainThread]: Using profiles.yml file at /Users/debattistiv/.dbt/profiles.yml
+[0m14:23:58.185766 [info ] [MainThread]: Using dbt_project.yml file at /Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt_project.yml
+[0m14:23:58.185940 [info ] [MainThread]: adapter type: bigquery
+[0m14:23:58.186096 [info ] [MainThread]: adapter version: 1.11.1
+[0m14:23:58.186252 [info ] [MainThread]: Configuration:
+[0m14:23:58.186393 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:23:58.186559 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m14:23:58.186762 [info ] [MainThread]: Required dependencies:
+[0m14:23:58.187070 [debug] [MainThread]: Executing "git --help"
+[0m14:23:58.232466 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:23:58.233049 [debug] [MainThread]: STDERR: "b''"
+[0m14:23:58.233268 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:23:58.233458 [info ] [MainThread]: Connection:
+[0m14:23:58.233665 [info ] [MainThread]:   method: service-account
+[0m14:23:58.233820 [info ] [MainThread]:   database: data-managment-491315
+[0m14:23:58.233967 [info ] [MainThread]:   execution_project: data-managment-491315
+[0m14:23:58.234100 [info ] [MainThread]:   schema: ecommerce_staging
+[0m14:23:58.234238 [info ] [MainThread]:   location: EU
+[0m14:23:58.234372 [info ] [MainThread]:   priority: interactive
+[0m14:23:58.234501 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m14:23:58.234631 [info ] [MainThread]:   impersonate_service_account: None
+[0m14:23:58.234762 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m14:23:58.234888 [info ] [MainThread]:   job_retries: 1
+[0m14:23:58.235021 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m14:23:58.235152 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m14:23:58.235282 [info ] [MainThread]:   timeout_seconds: 300
+[0m14:23:58.235411 [info ] [MainThread]:   client_id: None
+[0m14:23:58.235539 [info ] [MainThread]:   token_uri: None
+[0m14:23:58.235674 [info ] [MainThread]:   compute_region: None
+[0m14:23:58.235800 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m14:23:58.235929 [info ] [MainThread]:   gcs_bucket: None
+[0m14:23:58.236058 [info ] [MainThread]:   dataproc_batch: None
+[0m14:23:58.236455 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m14:23:58.357563 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m14:23:58.357972 [debug] [MainThread]: On debug: select 1 as id
+[0m14:23:58.358194 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:24:01.060560 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-managment-491315&j=bq:EU:83f8dcd9-57f5-4e65-951e-52162a77cbfb&page=queryresults
+[0m14:24:01.280779 [debug] [MainThread]: SQL status: OK in 0.219 seconds
+[0m14:24:01.550202 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:24:01.551012 [info ] [MainThread]: [31m1 check failed:[0m
+[0m14:24:01.551484 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt_project.yml> not found
+
+[0m14:24:01.560174 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.7079735, "process_in_blocks": "0", "process_kernel_time": 0.516752, "process_mem_max_rss": "223297536", "process_out_blocks": "0", "process_user_time": 1.539196}
+[0m14:24:01.560929 [debug] [MainThread]: Command `dbt debug` failed at 14:24:01.560788 after 4.71 seconds
+[0m14:24:01.561411 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:24:01.561881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x143223a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14327f530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1431846b0>]}
+[0m14:24:01.562395 [debug] [MainThread]: Flushing usage events
+[0m14:24:02.191754 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:56:28.439311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084a8ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ae3750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ae39d0>]}
+
+
+============================== 13:56:28.444144 | fad50143-4bf7-4e5a-913d-c09d47e3fa07 ==============================
+[0m13:56:28.444144 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:56:28.444525 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'log_path': 'logs', 'profiles_dir': '/Users/debattistiv/.dbt', 'log_format': 'default', 'fail_fast': 'False', 'warn_error': 'None', 'printer_width': '80', 'cache_selected_only': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'invocation_command': 'dbt run', 'partial_parse': 'True', 'log_cache_events': 'False', 'write_json': 'True', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'empty': 'False', 'indirect_selection': 'eager', 'quiet': 'False'}
+[0m13:56:28.444924 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/debattistiv/Library/CloudStorage/OneDrive-Sky/Documents/mystuff/tech/gcp-bigquery-data-quality-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:56:28.448069 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.40984246, "process_in_blocks": "0", "process_kernel_time": 0.238859, "process_mem_max_rss": "108707840", "process_out_blocks": "0", "process_user_time": 0.93793}
+[0m13:56:28.448428 [debug] [MainThread]: Command `dbt run` failed at 13:56:28.448371 after 0.41 seconds
+[0m13:56:28.448640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b115b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b6c290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b48c00>]}
+[0m13:56:28.448847 [debug] [MainThread]: Flushing usage events
+[0m13:56:29.081829 [debug] [MainThread]: An error was encountered while trying to flush usage events

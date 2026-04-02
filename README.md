@@ -15,7 +15,6 @@ Raw → Staging → Data Quality → Curated → Analytics
 * Duplicate primary key validation
 * Null checks
 * Referential integrity validation
-* Range validation
 * Business rule consistency
 
 ## Tech Stack
@@ -27,3 +26,29 @@ Raw → Staging → Data Quality → Curated → Analytics
 ## Outcome
 
 The curated dataset acts as a trusted data source (golden layer) for downstream analytics and ML use cases.
+
+# Install DBT
+# crea un virtual environment (opzionale ma consigliato)
+python3 -m venv dbt-env
+source dbt-env/bin/activate  
+
+# installa dbt-bigquery
+python3 -m venv dbt-env
+source dbt-env/bin/activate
+pip install dbt-bigquery
+
+## Overview
+End-to-end data pipeline using GA4 data:
+- Raw ingestion from BigQuery public dataset
+- Staging layer with cleaned and typed data
+- Data quality tests (dbt tests)
+- Business marts for analytics
+
+## KPIs
+- Revenue
+- Conversion Rate
+- Funnel (page_view → purchase)
+
+## Tech stack
+- dbt
+- BigQuery

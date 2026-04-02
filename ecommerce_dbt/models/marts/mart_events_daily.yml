@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: mart_revenue_daily
+    description: "KPI giornalieri di revenue da eventi GA4"
+
+    columns:
+      - name: event_date
+        description: "Data"
+
+      - name: total_purchases
+        description: "Numero totale acquisti"
+
+      - name: paying_users
+        description: "Numero utenti che hanno acquistato"
+
+      - name: total_revenue
+        description: "Revenue totale"
+
+      - name: avg_order_value
+        description: "Valore medio ordine"
+
+      - name: total_revenue
+        tests:
+          - not_null

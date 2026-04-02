@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ga4-us-project
+    schema: ga4_raw
+    tables:
+      - name: events_jan01_07
