@@ -11,7 +11,8 @@ jobs:
   dbt:
     runs-on: ubuntu-latest
     env:
-      GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_KEYFILE_JSON }}
+      GOOGLE_APPLICATION_CREDENTIALS: gcp-key.json
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
 
     steps:
       - name: Checkout repo
@@ -29,12 +30,11 @@ jobs:
       - name: Write GCP key file from Base64
         run: |
           echo "${{ secrets.GCP_KEY_BASE64 }}" | base64 --decode > gcp-key.json
-          
+
       - name: Authenticate with GCP
         run: |
           gcloud auth activate-service-account --key-file=gcp-key.json
           gcloud config set project "${{ secrets.GCP_PROJECT_ID }}"
-          gcloud config set compute/region US
 
       - name: Run dbt build
         run: |
