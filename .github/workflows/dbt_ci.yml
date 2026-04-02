@@ -23,9 +23,9 @@ jobs:
       - name: Install dbt AND dependencies
         run: |
           pip install dbt-bigquery
-          pip install dbt-bigquery dbt-utils
 
       - name: Run dbt build
         run: |
           cd ecommerce-dbt
+          dbt deps
           dbt build --profiles-dir .
