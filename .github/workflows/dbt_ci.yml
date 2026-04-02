@@ -20,18 +20,12 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dbt
+      - name: Install dbt AND dependencies
         run: |
           pip install dbt-bigquery
-
-      - name: Install dependencies
-        run: |
-          dbt deps
-
-      - name: Run dbt debug
-        run: |
-          dbt debug
+          pip install dbt-bigquery dbt-utils
 
       - name: Run dbt build
         run: |
-          dbt build
+          cd ecommerce-dbt
+          dbt build --profiles-dir .
