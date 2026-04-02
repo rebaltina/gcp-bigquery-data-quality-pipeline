@@ -10,6 +10,8 @@ on:
 jobs:
   dbt:
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_KEYFILE_JSON }}
 
     steps:
       - name: Checkout repo
@@ -23,6 +25,13 @@ jobs:
       - name: Install dbt AND dependencies
         run: |
           pip install dbt-bigquery
+
+      - name: Authenticate GCP
+        run: |
+          echo "${{ secrets.GCP_KEYFILE_JSON }}" > gcp-key.json
+          gcloud auth activate-service-account --key-file=gcp-key.json
+          gcloud config set project "${{ secrets.GCP_PROJECT_ID }}"
+          gcloud config set compute/region US
 
       - name: Run dbt build
         run: |

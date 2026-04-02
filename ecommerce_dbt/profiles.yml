@@ -9,5 +9,5 @@ ecommerce_dbt:
       dataset: ga4_staging
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: "{{ env_var('GCP_KEYFILE_JSON') }}"
+      keyfile: gcp-key.json
  
